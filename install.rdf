@@ -8,8 +8,9 @@
     <em:name>Zogger</em:name>
     <em:version>0.1</em:version>
     <em:description>Zogger</em:description>
-    <em:creator>Vedad Kirlic</em:creator>
+    <em:creator>Team Monument</em:creator>
     <!-- optional items -->
+    <em:contributor>Vedad Kirlic</em:contributor>
     <em:contributor>Nadir Zlatar</em:contributor>
     <em:contributor>Tarik Kurspahic</em:contributor>
     <em:contributor>Bruno Omerovic</em:contributor>
@@ -24,7 +25,7 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>3.6</em:minVersion>
-        <em:maxVersion>4.0.*</em:maxVersion>
+        <em:maxVersion>11.*</em:maxVersion>
       </Description>
     </em:targetApplication>
 
