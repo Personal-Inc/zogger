@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+  
+    <em:id>zogger@personal.com</em:id>
+    <em:name>Zogger</em:name>
+    <em:version>0.1</em:version>
+    <em:description>Zogger</em:description>
+    <em:creator>Vedad Kirlic</em:creator>
+    <!-- optional items -->
+    <em:contributor>Nadir Zlatar</em:contributor>
+    <em:contributor>Tarik Kurspahic</em:contributor>
+    <em:contributor>Bruno Omerovic</em:contributor>
+    <em:homepageURL>http://www.personal.com/zogger</em:homepageURL>
+    <!--em:optionsURL>chrome://sampleext/content/settings.xul</em:optionsURL>
+    <em:aboutURL>chrome://sampleext/content/about.xul</em:aboutURL>
+    <em:iconURL>chrome://sampleext/skin/mainicon.png</em:iconURL>
+    <em:updateURL>http://sampleextension.mozdev.org/update.rdf</em:updateURL-->
+
+    <!-- Firefox -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>3.6</em:minVersion>
+        <em:maxVersion>4.0.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+  </Description>
+
+</RDF>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://zogger/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://zogger/locale/overlay.dtd">
+<overlay id="zogger-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+
+  <menupopup id="menu_ToolsPopup">
+    <menuitem id="zogger-report" label="&zogger.report;" 
+              oncommand="Zogger.onMenuItemCommand(event);"/>
+  </menupopup>
+</overlay>

@@ -1,0 +1,7 @@
+content	zogger	content/
+overlay	chrome://browser/content/browser.xul	chrome://zogger/content/overlay.xul
+
+locale	zogger	en-US	locale/en-US/
+
+skin	zogger	classic/1.0	skin/
+style	chrome://global/content/customizeToolbar.xul	chrome://zogger/skin/overlay.css
