@@ -5,6 +5,7 @@ var Zogger = {
   },
 
   onMenuItemCommand: function() {
+	logObject2Console(console);
     gBrowser.loadOneTab("chrome://zogger/content/zogger-report.xul");
   }
 };

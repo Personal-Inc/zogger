@@ -4,7 +4,7 @@
 <overlay id="zogger-overlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script src="overlay.js"/>
-
+  <script src="logger.js"/>
   <menupopup id="menu_ToolsPopup">
     <menuitem id="zogger-report" label="&zogger.report;" 
               oncommand="Zogger.onMenuItemCommand(event);"/>

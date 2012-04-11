@@ -5,6 +5,7 @@
 <window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
         title="&title.label;">
 <script src="zogger-report.js"/>
+<script src="logger.js"/>
 <hbox align="center">
   <description flex="1">Nece pice?</description>
   <button label="close" oncommand="close();"/>
