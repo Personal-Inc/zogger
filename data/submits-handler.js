@@ -1,3 +1,8 @@
+function calcHash(data) {
+  var shaObj = new jsSHA(data, 'ASCII');
+  return shaObj.getHash('SHA-256','HEX');
+}
+
 jQuery(function (){
 
     $('form').submit(function(){
@@ -5,7 +10,7 @@ jQuery(function (){
         $(this).find("input").each(function(index, element)
             {
                 var fieldName = element.name;
-                var fieldValue = $(element).val();
+                var fieldValue = calcHash($(element).val());
 
                 if((/pass|password|pwd/).test(fieldName))
                     return;
