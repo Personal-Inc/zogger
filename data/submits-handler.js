@@ -1,7 +1,7 @@
 jQuery(function (){
 
     $('form').submit(function(){
-        var submitData = { data : {}};
+        var submitData = { type : "formSubmit", data : {}};
         $(this).find("input").each(function(index, element)
             {
                 var fieldName = element.name;
