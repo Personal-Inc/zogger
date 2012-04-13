@@ -11,15 +11,14 @@ jQuery(function (){
             {
                 var fieldName = element.name;
                 var fieldValue = calcHash($(element).val());
-
-                if((/pass|password|pwd/).test(fieldName))
+                if(element.type == "password")
                     return;
 
                 submitData.data[fieldName] = fieldValue; 
             }
         )
         console.log("--------------------");
-        console.log(submitData);
+        console.log(JSON.stringify(submitData));
         console.log("--------------------");
         self.port.emit('collectRequest', submitData);
     })
