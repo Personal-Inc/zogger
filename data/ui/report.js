@@ -11,13 +11,13 @@ var Zogger = (function(){
   }
 
   function fieldNameFacet(){
-    return {
-      'first_name' : 3,
-      'last_name' : 3, 
-      'name' : 22,
-      'email' : 66,
-      'password' : 20
-    };
+    return [
+	 {text: "first_name", weight: 15},
+		 {text: "last_name", weight: 115},
+		 {text: "name", weight: 415},
+		 {text: "email", weight: 5},
+		 {text: "password", weight: 215},
+    ];
   }
 
   return {
