@@ -12,8 +12,8 @@ Add-on sdk fasttrack setup:
 
 1. Download and install
 
- - wget https://ftp.mozilla.org/pub/mozilla.org/labs/jetpack/jetpack-sdk-latest.tar.gz --no-check-certificate
- - tar -xvf jetpack-sdk-latest.tar.gz
+ - wget https://ftp.mozilla.org/pub/mozilla.org/labs/jetpack/addon-sdk-1.6.1.tar.gz --no-check-certificate
+ - tar -xvf addon-sdk-1.6.1.tar.gz
 
 2. Activate addon-sdk
 
