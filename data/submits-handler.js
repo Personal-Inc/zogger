@@ -4,24 +4,14 @@ function calcHash(data) {
 }
 
 jQuery(function (){
-
-    $('form').submit(function(){
-        var submitData = { type : "formSubmit", data : {}};
-        $(this).find("input").each(function(index, element)
-            {
-                var fieldName = element.name;
-                var fieldValue = calcHash($(element).val());
-
-                submitData.data[fieldName] = fieldValue; 
-            }
-        )
-        console.log("--------------------");
-        console.log(JSON.stringify(submitData));
-        console.log("--------------------");
-        self.port.emit('collectRequest', submitData);
-    })
-
-    $.ajax.beforeSend(function(data){
-        console.log("MUUUU");
-    })
-})
+  $('form').submit(function(){
+    var submitData = { type : "formSubmit", data : {}};
+    $(this).find("input").each(function(index, element) {
+      var fieldName = element.name;
+      var value = $(element).val();
+      var fieldValue = value.length == 0 ? value : calcHash($(element).val());
+      submitData.data[fieldName] = fieldValue;
+    });
+    self.port.emit('collectRequest', submitData);
+  })
+});
