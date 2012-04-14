@@ -1,7 +1,21 @@
-var reportData;
-function initReportData(data){
-  reportData = data;
-};
+var Zogger = (function(){
+
+  var reportData;
+
+  function updateReport(data){
+    reportData = data;
+  }
+
+  function printToConsole(){
+    console.log(reportData);
+  }
+
+  return {
+    printToConsole : printToConsole,
+    updateReport : updateReport
+  };
+
+})();
 
 (function($){
 

@@ -1,3 +1,3 @@
-self.port.on('initReportData', function(data){
-  unsafeWindow.initReportData(data);
+self.port.on('updateReport', function(data){
+  unsafeWindow.Zogger.updateReport(data);
 });
