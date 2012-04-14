@@ -29,13 +29,13 @@ $(function(){
   countuper("countries");
   countuper("dangerzones");
   countuper("fields");
-	
-  $('.danger').mouseover(function(){
-    $(this)				
-  });
+  countuper("people");
+  countuper("passby");
+
   var timecapsule = $('.timecapsule');
   timecapsule.removeClass('dvadeset').removeClass('cetrdeset').removeClass('60').removeClass('80');
-  timecapsule.addClass('dvadeset')
+  timecapsule.addClass('dvadeset');
+
   var gdpData = {"af":16.63,"ba":11.58,"dz":158.97}
   var max = 0,
   min = Number.MAX_VALUE,

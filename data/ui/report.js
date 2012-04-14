@@ -15,7 +15,7 @@ var Zogger = (function(){
   }
 
   function getFacet(name){
-    return reportData.facets[name];
+   // return reportData.facets[name];
   }
 
   function getFacetObjects(facetName, valueProperty, countProperty){
