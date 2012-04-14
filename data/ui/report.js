@@ -11,13 +11,23 @@ var Zogger = (function(){
   }
 
   function fieldNameFacet(){
-    return [
-	 {text: "first_name", weight: 15},
-		 {text: "last_name", weight: 115},
-		 {text: "name", weight: 415},
-		 {text: "email", weight: 5},
-		 {text: "password", weight: 215},
-    ];
+    return getFacetObjects("fieldName", "text", "weight");
+  }
+
+  function getFacet(name){
+    return reportData.facets[name];
+  }
+
+  function getFacetObjects(facetName, valueProperty, countProperty){
+    var objects = [];
+    var facet = getFacet(facetName);
+    for (var value in facet){
+      var object = {};
+      object[valueProperty] = value;
+      object[countProperty] = facet[value];
+      objects.push(object);
+    }
+    return objects;
   }
 
   return {
@@ -27,13 +37,3 @@ var Zogger = (function(){
   };
 
 })();
-
-(function($){
-
-  $(function(){
-    $("#main").click(function(){
-      console.log("report");
-    });
-  });
-
-})(jQuery);
