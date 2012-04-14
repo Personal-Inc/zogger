@@ -1,9 +1,26 @@
 var Zogger = (function(){
 
-  var reportData;
+  var reportData, observers = { "reportUpdated" : []};
+
+  function onReportUpdated(callback){
+    addObserver("reportUpdated", callback);
+  }
+
+  function addObserver(eventType, observer){
+    observers[eventType].push(observer)
+  }
+
+  function notifyObservers() {
+    var args = Array.prototype.slice.call(arguments);
+    var event = args.shift();
+    $.each(observers[event], function(idx, callback){
+      callback.apply(this, args);
+    });
+  }
 
   function updateReport(data){
     reportData = data;
+    notifyObservers("reportUpdated", data);
   }
 
   function printToConsole(){
@@ -15,7 +32,7 @@ var Zogger = (function(){
   }
 
   function getFacet(name){
-    return reportData.facets[name];
+    return reportData ? reportData.facets[name] : {};
   }
 
   function getFacetObjects(facetName, valueProperty, countProperty){
@@ -33,7 +50,8 @@ var Zogger = (function(){
   return {
     fieldNameFacet : fieldNameFacet,
     printToConsole : printToConsole,
-    updateReport : updateReport
+    updateReport : updateReport,
+    onReportUpdated : onReportUpdated
   };
 
 })();

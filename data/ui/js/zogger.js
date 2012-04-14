@@ -1,11 +1,10 @@
-var fields = Zogger.fieldNameFacet();
-console.log(fields)
-
-
-	
 $(function(){
-  $("#fields").jQCloud(fields);
-		
+
+  var $fieldsCloud = $("#fields");
+  $fieldsCloud.jQCloud(Zogger.fieldNameFacet());
+  Zogger.onReportUpdated(function(){
+    $fieldsCloud.jQCloud(Zogger.fieldNameFacet());
+  });
 		
   function countuper(div,high){
     var current = 0;
