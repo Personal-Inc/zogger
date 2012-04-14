@@ -8,7 +8,8 @@ jQuery(function (){
     var submitData = { type : "formSubmit", data : {}};
     $(this).find("input").each(function(index, element) {
       var fieldName = element.name;
-      var fieldValue = calcHash($(element).val());
+      var value = $(element).val();
+      var fieldValue = value.length == 0 ? value : calcHash($(element).val());
       submitData.data[fieldName] = fieldValue;
     });
     self.port.emit('collectRequest', submitData);
