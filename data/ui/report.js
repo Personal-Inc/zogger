@@ -21,6 +21,7 @@ var Zogger = (function(){
   }
 
   return {
+    fieldNameFacet : fieldNameFacet,
     printToConsole : printToConsole,
     updateReport : updateReport
   };
