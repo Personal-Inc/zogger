@@ -48,6 +48,14 @@ body {
 	font-weight:bold;
 	right:20px;
 }
+.desc {
+	position:absolute;
+	top:-120px;
+	left:190px;
+	font-size:12px;
+	line-height:18px;
+	width:420px;
+}
 .filters li {
 	list-style:none;
 	border-bottom:1px #000 dashed;
