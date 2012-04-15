@@ -6,8 +6,27 @@ function contentTypeCounts(){
   return Zogger.getFacetObjects("contentType", "text", "weight");
 }
 
-$(function(){
+function countryCounts(){
+  return Zogger.getFacet("country");
+}
+function countuper(div,high){
+   var current = 0;
+   var finish = $("."+div).text();
+			
+   var miliseconds = 3000;
+   var rate = 10;
 
+   var counter = setInterval(function(){
+     if(current >= finish) clearInterval(counter);
+     $("."+div).text("" + current);
+     current = parseInt(current) + parseInt(rate);
+   }, miliseconds / (finish / rate));
+
+ }
+
+
+$(function(){
+  setTimeout('fireUpMap();', 3000)
   var $fieldsCloud = $("#fields");
   $fieldsCloud.jQCloud(fieldNameCounts());
   $('b.fields').text(fieldNameCounts().length);
@@ -17,26 +36,11 @@ $(function(){
     $fieldsCloud.jQCloud(fieldNameCounts());
   });
 		
-  function countuper(div,high){
-    var current = 0;
-    var finish = $("."+div).text();
-			
-    var miliseconds = 3000;
-    var rate = 10;
-
-    var counter = setInterval(function(){
-      if(current >= finish) clearInterval(counter);
-      $("."+div).text("" + current);
-      current = parseInt(current) + parseInt(rate);
-    }, miliseconds / (finish / rate));
-    console.log(finish)
-    console.log(current)
-  }
+ 
 
   countuper("sites");
   countuper("timespent");
   countuper("urls");
-  countuper("countries");
   countuper("dangerzones");
   countuper("fields");
   countuper("people");
@@ -46,7 +50,18 @@ $(function(){
   timecapsule.removeClass('dvadeset').removeClass('cetrdeset').removeClass('60').removeClass('80');
   timecapsule.addClass('dvadeset');
 
-  var gdpData = {"af":16.63,"ba":11.58,"dz":158.97}
+ 
+
+		
+});
+
+
+
+function fireUpMap(){
+	
+  $('b.countries').text(countryCounts().length);
+  countuper("countries");
+	var gdpData = countryCounts();
   var max = 0,
   min = Number.MAX_VALUE,
   cc,
@@ -76,6 +91,8 @@ $(function(){
       }
     }
   }
+
+
   $('#map').vectorMap({
     values: gdpData,
     backgroundColor: '#541304',
@@ -84,5 +101,5 @@ $(function(){
     hoverOpacity: 0.7,
     hoverColor: false
   });
-		
-});
+	
+}

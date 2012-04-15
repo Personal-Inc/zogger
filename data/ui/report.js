@@ -47,7 +47,8 @@ var Zogger = (function(){
     printToConsole : printToConsole,
     updateReport : updateReport,
     onReportUpdated : onReportUpdated,
-    getFacetObjects : getFacetObjects
+    getFacetObjects : getFacetObjects,
+	getFacet : getFacet
   };
 
 })();
