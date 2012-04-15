@@ -85,13 +85,26 @@
 
         <div class="innumbers ">
 
-          <span class="bignumber danger">CONTENT<b class="dangerzone">0</b></span><br />
+          <span class="bignumber danger">CONTENTTYPE<b class="dangerzone">0</b></span><br />
 		
             <div id="dangerzone">
 
           </div>
           <hr / >
         </div>
+
+
+		<div class="innumbers closed">
+
+          <span class="bignumber danger">REFERED<b class="refered">0</b></span><br />
+		
+            <div id="chart1">
+
+          </div>
+          <hr / >
+        </div>
+
+
 
 
 		 <div class="innumbers closed">
@@ -131,6 +144,51 @@
     
 
   </div>	
+
+
+ <script class="code" language="javascript" type="text/javascript">$(document).ready(function(){
+
+
+
+   var arr = [[11, 123, 1236, "Acura"], [45, 92, 1067, "Alfa Romeo"], 
+
+     [24, 104, 1176, "AM General"], [50, 23, 610, "Aston Martin Lagonda"], 
+
+     [18, 17, 539, "Audi"], [7, 89, 864, "BMW"], [2, 13, 1026, "Bugatti"]];
+
+ 
+
+   plot1 = $.jqplot('chart1',[arr],{
+
+     seriesDefaults:{
+
+       renderer: $.jqplot.BubbleRenderer,
+
+       rendererOptions: {
+
+         bubbleAlpha: 0.6,
+
+         highlightAlpha: 0.8
+
+       },
+
+       shadow: true,
+
+       shadowAlpha: 0.05
+
+     }
+
+   });    
+
+ });</script>
+
+
+ <script class="include" type="text/javascript" src="js/jquery.jqplot.min.js"></script>
+ <script class="include" type="text/javascript" src="js/jqplot.bubbleRenderer.min.js"></script>
+ <!-- End additional plugins -->
+
+
+
   <script type="text/javascript" src="example.min.js"></script>
   <div id="footer" class="closed"> 
     <div id="footer-inner">
