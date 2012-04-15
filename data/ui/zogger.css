@@ -26,6 +26,20 @@ body {
 	-moz-box-shadow:    1px 1px 8px rgba(48, 50, 50, 0.8);
 	box-shadow:         1px 1px 8px rgba(48, 50, 50, 0.8);
 }
+
+.innumbers .url {
+	-webkit-box-shadow: 1px 1px 8px rgba(48, 50, 50, 0.8);
+	-moz-box-shadow:    1px 1px 8px rgba(48, 50, 50, 0.8);
+	box-shadow:         1px 1px 8px rgba(48, 50, 50, 0.8);
+	color:#812410;
+	padding:5px;
+	margin:5px;
+	background:#fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+}
 #zogger-reports {
 	padding:20px;
 	position:relative;
