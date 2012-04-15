@@ -4,6 +4,10 @@ body {
 	background:#b32d10 url(img/bg.jpg) top center repeat-x;
 	color:#fff;
 }
+#dangerzone {
+	width:900px;
+	height:200px;
+}
 #fields {
 	width:100%;
 	height:200px;

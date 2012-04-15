@@ -28,7 +28,6 @@
 	</div>
 
     <div id="zogger-reports">
-      <h1>Das iz Zogger Reports </h1>
 
       <div class="desc closed">
       	Hello,
@@ -38,14 +37,12 @@
       </div>
       <div class="filters">
 		<br /><br />
-        Wanna have this report daily on your email?
-		<br />
-		<input type="text" placeholder="Enter Your Email" /> <input type="button" value="Save" />
+	      <h1>Zogger Reports </h1>
       </div>
 
       <div id="numbers">
         <div class="innumbers">
-          <span class="bignumber">SITES<b class="sites">0</b></span><br />
+          <span class="bignumber">DOMAINS<b class="sites">0</b></span><br />
           <br/>
           <div class="sitesall">
 	
@@ -54,7 +51,12 @@
           <br /><hr /></br >
         </div>
 
-        <div class="innumbers">
+
+
+		
+		
+		
+        <div class="innumbers closed">
 
           <span class="bignumber">WASTEDTIME<b class="timespent">500</b>h</span><br />
 
@@ -81,18 +83,18 @@
         </div>
 
 
-        <div class="innumbers closed">
+        <div class="innumbers ">
 
-          <span class="bignumber danger">DANGERZONES<b class="dangerzones">120</b></span><br />
+          <span class="bignumber danger">CONTENT<b class="dangerzone">0</b></span><br />
 		
-            <div id="chart1">
+            <div id="dangerzone">
 
           </div>
           <hr / >
         </div>
 
 
-		 <div class="innumbers">
+		 <div class="innumbers closed">
 
 	          <span class="bignumber ">PASSBY<b class="passby">120</b></span><br />
 			   <span class="url">www.facebook.com</span> <span class="url"> www.google.com </span><br /><br />
@@ -126,31 +128,7 @@
 
 
 
-    <script class="code" language="javascript" type="text/javascript">$(document).ready(function(){
     
-      var arr = [[11, 123, 1236, "Acura"], [45, 92, 1067, "Alfa Romeo"], 
-        [24, 104, 1176, "AM General"], [50, 23, 610, "Aston Martin Lagonda"], 
-        [18, 17, 539, "Audi"], [7, 89, 864, "BMW"], [2, 13, 1026, "Bugatti"]];
-    
-      plot1 = $.jqplot('chart1',[arr],{
-        seriesDefaults:{
-          renderer: $.jqplot.BubbleRenderer,
-          rendererOptions: {
-            bubbleAlpha: 0.6,
-            highlightAlpha: 0.8
-          },
-          shadow: true,
-          shadowAlpha: 0.05
-        }
-      });    
-    });</script>
-
-    <script class="include" type="text/javascript" src="js/jquery.jqplot.min.js"></script>
-
-    <script class="include" type="text/javascript" src="js/jqplot.bubbleRenderer.min.js"></script>
-
-    <!-- End additional plugins -->
-
 
   </div>	
   <script type="text/javascript" src="example.min.js"></script>

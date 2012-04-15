@@ -44,6 +44,20 @@ $(function(){
   setTimeout('fireUpMap();', 2000);
   setTimeout('addFavicons()', 200);
   setTimeout('closePreloader();', 3000);
+  
+
+  var $contentCloud = $("#dangerzone");
+  $contentCloud.jQCloud(contentTypeCounts());
+  $('b.dangerzone').text(contentTypeCounts().length);
+  Zogger.onReportUpdated(function(){
+    $contentCloud.html('');
+    $('b.dangerzone').text(contentTypeCounts().length);
+    $contentCloud.jQCloud(contentTypeCounts());
+  });
+
+  
+
+
   var $fieldsCloud = $("#fields");
   $fieldsCloud.jQCloud(fieldNameCounts());
   $('b.fields').text(fieldNameCounts().length);
@@ -53,7 +67,6 @@ $(function(){
     $fieldsCloud.jQCloud(fieldNameCounts());
   });
 		
- 
 
   countuper("timespent");
   countuper("urls");
@@ -75,6 +88,7 @@ $(function(){
 
 function fireUpMap(){
   $('.removemap').hide();
+
   $('b.sites').text(Zogger.getFacetObjects("domain", "text", "weight").length);
   $('b.countries').text(Zogger.getFacetObjects("country", "text", "weight").length);
   countuper("countries");
