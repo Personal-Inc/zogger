@@ -58,8 +58,8 @@ $(function(){
 
 
 function fireUpMap(){
-	
-  $('b.countries').text(countryCounts().length);
+  $('.removemap').hide();
+  $('b.countries').text(Zogger.getFacetObjects("country", "text", "weight").length);
   countuper("countries");
 	var gdpData = countryCounts();
   var max = 0,
