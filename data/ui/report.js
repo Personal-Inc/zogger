@@ -26,11 +26,7 @@ var Zogger = (function(){
   function printToConsole(){
     console.log(reportData);
   }
-
-  function fieldNameFacet(){
-    return getFacetObjects("fieldName", "text", "weight");
-  }
-
+  
   function getFacet(name){
     return reportData ? reportData.facets[name] : {};
   }
@@ -48,10 +44,10 @@ var Zogger = (function(){
   }
 
   return {
-    fieldNameFacet : fieldNameFacet,
     printToConsole : printToConsole,
     updateReport : updateReport,
-    onReportUpdated : onReportUpdated
+    onReportUpdated : onReportUpdated,
+    getFacetObjects : getFacetObjects
   };
 
 })();

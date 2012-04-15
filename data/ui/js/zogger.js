@@ -1,12 +1,19 @@
+function fieldNameCounts(){
+  return Zogger.getFacetObjects("fieldName", "text", "weight");
+}
+
+function contentTypeCounts(){
+  return Zogger.getFacetObjects("contentType", "text", "weight");
+}
+
 $(function(){
 
   var $fieldsCloud = $("#fields");
-  $fieldsCloud.jQCloud(Zogger.fieldNameFacet());
-  $('b.fields').text(Zogger.fieldNameFacet().length)
+  $fieldsCloud.jQCloud(fieldNameCounts());
   Zogger.onReportUpdated(function(){
-	$('#fields').html('');
-	 $('b.fields').text(Zogger.fieldNameFacet().length)
-    $fieldsCloud.jQCloud(Zogger.fieldNameFacet());
+    $fieldsCloud.html('');
+    $('b.fields').text(Zogger.fieldNameFacet().length)
+    $fieldsCloud.jQCloud(fieldNameCounts());
   });
 		
   function countuper(div,high){
