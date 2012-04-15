@@ -24,9 +24,12 @@ function countuper(div,high){
 
  }
 
-
+function closePreloader(){
+  $('#preloader').hide();
+}
 $(function(){
-  setTimeout('fireUpMap();', 3000)
+  setTimeout('fireUpMap();', 2000);
+  setTimeout('closePreloader();', 3000);
   var $fieldsCloud = $("#fields");
   $fieldsCloud.jQCloud(fieldNameCounts());
   $('b.fields').text(fieldNameCounts().length);

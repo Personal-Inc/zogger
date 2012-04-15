@@ -89,6 +89,26 @@ a {
 }
 .jqplot-series-canvas {
 }
+
+#preloader {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background:#000;
+	opacity:0.8;
+	z-index:9999;
+}
+
+.preloader-imgs {
+	font-weight:bold;
+	font-size:12px;
+	position:absolute;
+	top:45%;
+	left:45%;
+}
+
 .bignumber {
 	font-size:100px;
 	font-weight:bold;
