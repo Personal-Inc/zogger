@@ -9,6 +9,7 @@ function contentTypeCounts(){
 function countryCounts(){
   return Zogger.getFacet("country");
 }
+
 function countuper(div,high){
    var current = 0;
    var finish = $("."+div).text();
@@ -27,8 +28,21 @@ function countuper(div,high){
 function closePreloader(){
   $('#preloader').hide();
 }
+
+function addFavicons(){
+	var domains = Zogger.getFacet("domain");
+	$.each(domains, function(index, value) {
+	  $('.favicons').prepend("<img src='http://www."+index+"/favicon.ico' width='16' height='16' />");
+	});
+	
+	$('img').error(function() {
+	  $(this).remove();
+	});
+}
 $(function(){
+	
   setTimeout('fireUpMap();', 2000);
+  setTimeout('addFavicons()', 200);
   setTimeout('closePreloader();', 3000);
   var $fieldsCloud = $("#fields");
   $fieldsCloud.jQCloud(fieldNameCounts());
@@ -41,7 +55,6 @@ $(function(){
 		
  
 
-  countuper("sites");
   countuper("timespent");
   countuper("urls");
   countuper("dangerzones");
@@ -62,6 +75,7 @@ $(function(){
 
 function fireUpMap(){
   $('.removemap').hide();
+  $('b.sites').text(Zogger.getFacetObjects("domain", "text", "weight").length);
   $('b.countries').text(Zogger.getFacetObjects("country", "text", "weight").length);
   countuper("countries");
 	var gdpData = countryCounts();
