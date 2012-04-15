@@ -67,6 +67,12 @@ $(function(){
     $fieldsCloud.jQCloud(fieldNameCounts());
   });
 		
+  Zogger.onReportUpdated(function(){
+	$('#map').html('');
+	fireUpMap();
+	$('#allfavs').html('<div class="favicons"></div>');
+	addFavicons();
+});
 
   countuper("timespent");
   countuper("urls");
