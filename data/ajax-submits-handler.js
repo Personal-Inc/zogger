@@ -11,8 +11,11 @@ function parseParams(params){
         data = element.split("=");
         name = data[0];
         value = data[1];
-        var fieldValue = value.length == 0 ? value : calcHash(value);
-        submitData.data[name] = fieldValue;
+        if(value)
+        {
+            var fieldValue = value.length == 0 ? value : calcHash(value);
+            submitData.data[name] = fieldValue;
+        }
     })
 
     return;
