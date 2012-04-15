@@ -10,9 +10,10 @@ $(function(){
 
   var $fieldsCloud = $("#fields");
   $fieldsCloud.jQCloud(fieldNameCounts());
+  $('b.fields').text(fieldNameCounts().length);
   Zogger.onReportUpdated(function(){
     $fieldsCloud.html('');
-    $('b.fields').text(Zogger.fieldNameFacet().length)
+    $('b.fields').text(fieldNameCounts().length);
     $fieldsCloud.jQCloud(fieldNameCounts());
   });
 		
