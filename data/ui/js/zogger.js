@@ -3,6 +3,7 @@ $(function(){
   var $fieldsCloud = $("#fields");
   $fieldsCloud.jQCloud(Zogger.fieldNameFacet());
   Zogger.onReportUpdated(function(){
+	$('#fields').html('');
     $fieldsCloud.jQCloud(Zogger.fieldNameFacet());
   });
 		
