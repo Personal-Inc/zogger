@@ -28,6 +28,16 @@ var Zogger = (function(){
   }
   
   function getFacet(name){
+    if (!reportData) return {};
+    if (name == 'referred'){
+      var facet = {};
+      for (var r in reportData.referred) {
+        facet[r] = reportData.referred[r].length
+      }
+      return facet;
+    } else {
+      return reportData.facets[name];
+    }
     return reportData ? reportData.facets[name] : {};
   }
 
