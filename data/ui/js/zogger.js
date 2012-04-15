@@ -2,8 +2,10 @@ $(function(){
 
   var $fieldsCloud = $("#fields");
   $fieldsCloud.jQCloud(Zogger.fieldNameFacet());
+  $('b.fields').text(Zogger.fieldNameFacet().length)
   Zogger.onReportUpdated(function(){
 	$('#fields').html('');
+	 $('b.fields').text(Zogger.fieldNameFacet().length)
     $fieldsCloud.jQCloud(Zogger.fieldNameFacet());
   });
 		
