@@ -1,9 +1,9 @@
 {
-    "name": "Zogger", 
+    "name": "zogger", 
     "license": "MIT", 
     "author": "Team Zogger", 
     "version": "0.1", 
-    "fullName": "Zogger", 
+    "fullName": "zogger", 
     "id": "jid1-9LaIBM8CJX29PQ", 
     "description": "Enable this extension to do a quantified-self analysis of your browsing habits and history. This is experimental and built in a weekend so please excuse any bugs and check back for updates."
 }
