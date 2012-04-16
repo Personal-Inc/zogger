@@ -1,9 +1,9 @@
 {
-    "name": "zogger", 
-    "license": "MPL 2.0", 
-    "author": "", 
+    "name": "Zogger", 
+    "license": "MIT", 
+    "author": "Team Zogger", 
     "version": "0.1", 
-    "fullName": "zogger", 
+    "fullName": "Zogger", 
     "id": "jid1-9LaIBM8CJX29PQ", 
-    "description": "a basic add-on"
+    "description": "Enable this extension to do a quantified-self analysis of your browsing habits and history. This is experimental and built in a weekend so please excuse any bugs and check back for updates."
 }
